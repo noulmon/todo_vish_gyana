@@ -35,9 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # third-party apps
+
+    # third-party apps(libraries)
     'rest_framework',
     'rest_framework.authtoken',
+
+    # local apps
+    'user',
+    'task',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +54,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',)
+}
+
+AUTH_USER_MODEL = 'user.User'
 
 ROOT_URLCONF = 'todo_vish_gyana.urls'
 
@@ -72,14 +87,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'todo_vish_gyana.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+POSTGRES = True
+if POSTGRES:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'todo_app',
+            'USER': 'postgres',
+            'PASSWORD': 'root',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -116,3 +143,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
