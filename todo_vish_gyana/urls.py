@@ -22,5 +22,6 @@ from todo_vish_gyana import settings
 urlpatterns = [
                   path('', admin.site.urls),
                   path('user/', include('user.urls')),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
-              + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('task/', include('task.urls')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
+                                                                                         document_root=settings.STATIC_ROOT)

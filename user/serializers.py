@@ -1,4 +1,3 @@
-from django.core.validators import validate_email
 from rest_framework import serializers
 
 from user.models import User

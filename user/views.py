@@ -41,7 +41,7 @@ class Login(APIView):
     @permission_classes((AllowAny,))
     def post(self, request):
         try:
-            '''phone'''
+            '''email'''
             email = request.data.get('email')
             '''password'''
             password = request.data.get('password')
