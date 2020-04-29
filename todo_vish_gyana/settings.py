@@ -24,7 +24,7 @@ SECRET_KEY = '%x!)1%o6pv!hptcz&teuiyp@1#zp=0*ny#18*!uv#9$l=dv+l6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['todo-vish-gyana-dev.ap-south-1.elasticbeanstalk.com', '172.31.28.36', '127.0.0.1', '*']
 
 # Application definition
 
@@ -87,9 +87,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'todo_vish_gyana.wsgi.application'
 
 # Database
-
-POSTGRES = True
-if POSTGRES:
+if 'RDS_DB_NAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
+        }
+    }
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -98,13 +107,6 @@ if POSTGRES:
             'PASSWORD': 'root',
             'HOST': 'localhost',
             'PORT': '5432',
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
