@@ -3,17 +3,20 @@ branch-defaults:
     environment: todo-vish-gyana-dev2
     group_suffix: null
   master:
-    environment: todo-vish-gyana-dev2
+    environment: todo-vish-gyana2-dev
     group_suffix: null
 environment-defaults:
   todo-vish-gyana-dev:
     branch: null
     repository: null
+  todo-vish-gyana-dev2:
+    branch: null
+    repository: null
 global:
-  application_name: todo_vish_gyana
+  application_name: todo_vish_gyana2
   branch: null
-  default_ec2_keyname: aws-eb-todo-vgts
-  default_platform: Python 3.7 running on 64bit Amazon Linux 2
+  default_ec2_keyname: aws-eb
+  default_platform: Python 3.6 running on 64bit Amazon Linux
   default_region: ap-south-1
   include_git_submodules: true
   instance_profile: null
