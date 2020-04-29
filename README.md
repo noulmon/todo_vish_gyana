@@ -36,8 +36,8 @@ User can also get the list of all tasks created by them(only).
         http://127.0.0.1:8000/
 
 ## API Documentation:
-   - API Documentation are in: ``\docs\api_docs\blog_post_api_doc.json``
-   - Browsable Documentation: `https://documenter.getpostman.com/view/6826654/Szf55ACK` 
+   - API Documentation are in: ``\docs\api_docs\todo_app_api_docs.json``
+   - Browsable Documentation: `https://documenter.getpostman.com/view/6826654/SzmY819S` 
 
 ### API Endpoints:
 ##### User APIs:
