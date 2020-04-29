@@ -35,6 +35,9 @@ User can also get the list of all tasks created by them(only).
     
         http://127.0.0.1:8000/
 
+## AWS:
+ Elastic Beanstalk Instance: `http://todo-vish-gyana2-dev.ap-south-1.elasticbeanstalk.com/`
+
 ## API Documentation:
    - API Documentation are in: ``\docs\api_docs\todo_app_api_docs.json``
    - Browsable Documentation: `https://documenter.getpostman.com/view/6826654/SzmY819S` 
