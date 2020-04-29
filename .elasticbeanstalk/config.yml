@@ -1,9 +1,9 @@
 branch-defaults:
   initial-commit:
-    environment: todo-vish-gyana-dev
+    environment: todo-vish-gyana-dev2
     group_suffix: null
   master:
-    environment: todo-vish-gyana-dev
+    environment: todo-vish-gyana-dev2
     group_suffix: null
 environment-defaults:
   todo-vish-gyana-dev:
