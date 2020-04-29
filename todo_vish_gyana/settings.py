@@ -24,7 +24,7 @@ SECRET_KEY = '%x!)1%o6pv!hptcz&teuiyp@1#zp=0*ny#18*!uv#9$l=dv+l6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todo-vish-gyana-dev.ap-south-1.elasticbeanstalk.com', '172.31.28.36', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['todo-vish-gyana-dev2.ap-south-1.elasticbeanstalk.com', '172.31.28.36', '127.0.0.1', '*']
 
 # Application definition
 
