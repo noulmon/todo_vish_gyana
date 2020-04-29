@@ -42,13 +42,13 @@ User can also get the list of all tasks created by them(only).
    - API Documentation are in: ``\docs\api_docs\todo_app_api_docs.json``
    - Browsable Documentation: `https://documenter.getpostman.com/view/6826654/SzmY819S` 
 
-### API Endpoints:
-##### User APIs:
+## API Endpoints:
+#### User APIs:
 1. For user to register in the application`(POST)`: ```/user/register/```
 2. For user to sign in to the application`(POST)`: ```/user/login/```
 
-##### Task APIs:
-(**_`Note: Please add the 'user token' as the 'Authorization Header' for all APIs`_**)
+#### Task APIs:
+(**_`Note: Please add the 'user token' as the 'Authorization Header' for all below APIs`_**)
 1. To create/add tasks`(POST)`: ```/task/create/```
 
 2. To view task details`(GET)`: ```task/view/<int:pk>/```
