@@ -7,6 +7,7 @@ chardet==3.0.4
 colorama==0.4.3
 dj-database-url==0.5.0
 Django==3.0.5
+django-cors-headers==3.5.0
 django-heroku==0.3.1
 djangorestframework==3.11.0
 docutils==0.15.2
@@ -16,10 +17,10 @@ idna==2.7
 jmespath==0.9.5
 pathspec==0.5.9
 psycopg2==2.8.5
-
+pypiwin32==223
 python-dateutil==2.8.0
-pytz
-
+pytz==2020.1
+pywin32==228
 PyYAML==5.3.1
 requests==2.20.1
 semantic-version==2.5.0
